@@ -14,7 +14,7 @@ public class JournalRepo {
         return list;
     }
 
-    public JournalEntity addAllJournals(JournalEntity journal) {
+    public JournalEntity addJournals(JournalEntity journal) {
 
         list.add(journal);
         return journal;
@@ -35,5 +35,9 @@ public class JournalRepo {
         }
 
         return null;
+    }
+    public void deleteJournal(int id,journal) {
+        list.remove(id);
+        list.
     }
 }

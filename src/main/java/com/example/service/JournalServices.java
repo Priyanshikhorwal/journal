@@ -17,11 +17,14 @@ public class JournalServices {
         return journalRepo.findAll();
     }
 
-    public JournalEntity addAllJournals(JournalEntity journal) {
-        return journalRepo.addAllJournals(journal);
+    public JournalEntity addJournals(JournalEntity journal) {
+        return journalRepo.addJournals(journal);
     }
 
     public JournalEntity updateJournal(int id,JournalEntity journal) {
         return journalRepo.updateJournal(id,journal);
+    }
+    public void deleteById(int id) {
+        journalRepo.deleteById(id);
     }
 }

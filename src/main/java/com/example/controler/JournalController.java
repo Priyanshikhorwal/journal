@@ -22,13 +22,16 @@ public class JournalController {
     }
 
     @PostMapping("/add")
-    public JournalEntity addAllJournals(@RequestBody JournalEntity journal){
-        return journalServices.addAllJournals(journal);
+    public JournalEntity addJournals(@RequestBody JournalEntity journal){
+        return journalServices.addJournals(journal);
     }
     @PutMapping("/{id}")
     public JournalEntity updateAllJournals(@PathVariable int id,@RequestBody JournalEntity journal){
         return journalServices.updateJournal(id,journal);
     }
-
+    @DeleteMapping("/delete/{id}")
+    public void deleteJournals(@PathVariable int id,@RequestBody JournalController journal){
+        journalServices.deleteById(id,journal);
+    }
 
 }
