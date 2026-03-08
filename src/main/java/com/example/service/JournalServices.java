@@ -24,7 +24,8 @@ public class JournalServices {
     public JournalEntity updateJournal(int id,JournalEntity journal) {
         return journalRepo.updateJournal(id,journal);
     }
+
     public void deleteById(int id) {
-        journalRepo.deleteById(id);
+        journalRepo.deleteJournal(id);
     }
 }

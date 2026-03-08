@@ -30,8 +30,8 @@ public class JournalController {
         return journalServices.updateJournal(id,journal);
     }
     @DeleteMapping("/delete/{id}")
-    public void deleteJournals(@PathVariable int id,@RequestBody JournalController journal){
-        journalServices.deleteById(id,journal);
+    public void deleteJournals(@PathVariable int id){
+        journalServices.deleteById(id);
     }
 
 }

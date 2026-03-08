@@ -8,14 +8,14 @@ import java.util.List;
 
 @Repository
 public class JournalRepo {
-
+    private int counter = 1;
     private final List<JournalEntity> list=new ArrayList<JournalEntity>();
     public List<JournalEntity> findAll() {
         return list;
     }
 
     public JournalEntity addJournals(JournalEntity journal) {
-
+        journal.setId(counter++);
         list.add(journal);
         return journal;
     }
@@ -36,8 +36,7 @@ public class JournalRepo {
 
         return null;
     }
-    public void deleteJournal(int id,journal) {
-        list.remove(id);
-        list.
+    public void deleteJournal(int id) {
+        list.removeIf(j -> j.getId() == id);
     }
 }
